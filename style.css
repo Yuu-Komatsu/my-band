@@ -1,43 +1,25 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    overflow-x: hidden;
 }
 
-/* タブ */
 .tabs {
     display: flex;
-    flex-wrap: wrap;
-    /* ← スマホ折り返し対応 */
 }
 
 .tab {
     flex: 1;
-    min-width: 100px;
-    /* ← 小さくなりすぎ防止 */
     padding: 12px;
     text-align: center;
-    background: #f2f2f2;
+    background: #eee;
     cursor: pointer;
-    border-bottom: 3px solid transparent;
-    transition: 0.2s;
-    font-size: 14px;
 }
 
-/* 選択中タブ */
 .tab.active {
-    background: white;
-    border-bottom: 3px solid #2b6cff;
+    background: #ccc;
     font-weight: bold;
-    color: #2b6cff;
 }
 
-/* タップ感 */
-.tab:active {
-    transform: scale(0.98);
-}
-
-/* コンテンツ */
 .content {
     display: none;
 }
@@ -46,32 +28,8 @@ body {
     display: block;
 }
 
-/* PDF表示 */
-iframe {
+img {
     width: 100%;
-    height: 100vh;
-    /* ← 画面いっぱい */
-    border: none;
-}
-
-/* スマホ微調整 */
-@media (max-width:600px) {
-    .tab {
-        font-size: 13px;
-        padding: 10px;
-    }
-}
-
-iframe{
-  width:100%;
-  height:calc(100vh - 60px);
-  border:none;
-  background:white;
-}
-
-/* スマホ調整 */
-@media (max-width:600px){
-  iframe{
-    height:85vh;
-  }
+    height: auto;
+    display: block;
 }
