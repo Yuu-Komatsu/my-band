@@ -30,6 +30,8 @@ body {
 
 img {
     width: 100%;
-    height: auto;
+    max-height: calc(100vh - 60px);
+    object-fit: contain;
     display: block;
+    margin: auto;
 }
