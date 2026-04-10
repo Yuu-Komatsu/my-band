@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Info</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="tabs">
+        <div class="tab active" onclick="openTab('month')">今月</div>
+        <div class="tab" onclick="openTab('next')">来月</div>
+        <div class="tab" onclick="openTab('year')">年間</div>
+    </div>
+
+    <div id="month" class="content active">
+        <iframe src="files/month.pdf"></iframe>
+    </div>
+
+    <div id="next" class="content">
+        <iframe src="files/next.pdf"></iframe>
+    </div>
+
+    <div id="year" class="content">
+        <iframe src="files/year.pdf"></iframe>
+    </div>
+
+    <script>
+        function openTab(id) {
+            document.querySelectorAll(".content")
+                .forEach(e => e.classList.remove("active"));
+
+            document.querySelectorAll(".tab")
+                .forEach(e => e.classList.remove("active"));
+
+            document.getElementById(id).classList.add("active");
+            event.target.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>
