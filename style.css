@@ -61,3 +61,17 @@ iframe {
         padding: 10px;
     }
 }
+
+iframe{
+  width:100%;
+  height:calc(100vh - 60px);
+  border:none;
+  background:white;
+}
+
+/* スマホ調整 */
+@media (max-width:600px){
+  iframe{
+    height:85vh;
+  }
+}
